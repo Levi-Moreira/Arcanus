@@ -13,7 +13,7 @@ import java.util.*
 import javax.security.auth.x500.X500Principal
 
 
-class KeystoreKeeper(val context: Context) {
+class KeystoreKeeper(private val context: Context) {
     private val keyStore = KeyStore.getInstance(KEY_STORE)
     fun addKeyForAlias(alias: String, companyName: String, organization: String) {
         keyStore.load(null)
