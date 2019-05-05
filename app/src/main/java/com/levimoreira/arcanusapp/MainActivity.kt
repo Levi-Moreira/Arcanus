@@ -1,8 +1,9 @@
-package com.levimoreira.arcanus
+package com.levimoreira.arcanusapp
 
 import androidx.appcompat.app.AppCompatActivity
 
 import android.os.Bundle
+import com.levimoreira.arcanus.Arcanus
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,12 +12,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val senstiveData = "SensitiveData"
+        val sensitiveData = "SensitiveData"
 
-        Arcanus.addString(this, SECRET_KEY, senstiveData)
+        Arcanus.addString(this, SECRET_KEY, sensitiveData)
         val retrievedData = Arcanus.getString(this, SECRET_KEY)
 
-        assert(senstiveData == retrievedData)
+        assert(sensitiveData == retrievedData)
     }
 
     companion object {

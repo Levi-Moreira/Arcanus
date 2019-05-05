@@ -7,9 +7,21 @@ From the [official](https://developer.android.com/training/articles/keystore) pa
 
 > Android Keystore system protects key material from unauthorized use.
 
-The data encrypted using the keystore cannot be used outside of the Android device where it was encrypted, therefore making the information safe. To use Arcanus for now you'd need to clone this repository.
+The data encrypted using the keystore cannot be used outside of the Android device where it was encrypted, therefore making the information safe. 
 
-Initialize the KeyStore in your Application class:
+# Download
+
+----------
+
+To add this to your project simply add Arcanus as a dependency:
+
+```gradle
+implementation 'com.levimoreira.arcanus:arcanus:0.1.0'
+````
+
+# Usage
+
+Using Arcanus is very simple. Initialize the KeyStore in your Application class:
 
 ```kotlin
 class MyApplication : Application() {
@@ -23,8 +35,8 @@ class MyApplication : Application() {
 Once the keystore is initialized you can store and retrieve data from a shared prefs instance inside Arcanus:
 
 ```kotlin
-val senstiveData = "SensitiveData"
-Arcanus.addString(this, SECRET_KEY, senstiveData)
+val sensitiveData = "SensitiveData"
+Arcanus.addString(this, SECRET_KEY, sensitiveData)
 val retrievedData = Arcanus.getString(this, SECRET_KEY)
 ```
  

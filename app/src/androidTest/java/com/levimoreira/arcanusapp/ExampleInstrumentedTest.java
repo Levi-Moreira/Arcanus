@@ -1,4 +1,4 @@
-package com.levimoreira.arcanus;
+package com.levimoreira.arcanusapp;
 
 import android.content.Context;
 
