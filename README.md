@@ -11,8 +11,6 @@ The data encrypted using the keystore cannot be used outside of the Android devi
 
 # Download
 
-----------
-
 To add this to your project simply add Arcanus as a dependency:
 
 ```gradle
@@ -44,8 +42,6 @@ val retrievedData = Arcanus.getString(this, SECRET_KEY)
  Don't worry, even if someone gets hold of that file they won't be able to decipher it without the key.
  
  # License
- 
- -------
  
      Copyright (c) 2019 Levi Moreira
  
